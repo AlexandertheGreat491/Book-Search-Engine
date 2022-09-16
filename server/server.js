@@ -1,5 +1,7 @@
 // imports the express library
 const express = require('express');
+// imports the ApolloServer
+const {ApolloServer} = require('apollo-server-express');
 const path = require('path');
 // imports the connetion.js & files in schemas directory
 const db = require('./config/connection');
