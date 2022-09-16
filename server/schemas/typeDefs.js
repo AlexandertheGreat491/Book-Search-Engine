@@ -23,6 +23,11 @@ type Book {
     link: String
 }
 
+type Auth {
+    token: ID!
+    user: User
+}
+
 
 `;
 
