@@ -28,6 +28,12 @@ type Auth {
     user: User
 }
 
+type Mutation {
+    login(email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
+    saveBook(bookData: saveBookInput): User
+    removeBook(bookId: ID!): User
+}
 
 `;
 
