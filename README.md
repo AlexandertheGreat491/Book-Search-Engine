@@ -43,6 +43,8 @@ Sources:
 
 [Create React App](https://github.com/facebook/create-react-app)
 
+[jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
+
 [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 
 [React Docs](https://reactjs.org/docs/getting-started.html)
