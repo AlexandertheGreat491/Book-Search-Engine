@@ -2,7 +2,14 @@
 const { gql } = require('apollo-server-express');
 
 // creates the typeDefs
-const typeDefs = gql``;
+const typeDefs = gql`
+type User {
+    _id: ID
+    username: String
+    email: String
+    bookCount:
+}
+`;
 
 // export the typeDefs
 module.exports = typeDefs;
