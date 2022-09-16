@@ -1,7 +1,7 @@
 {
     "name": "googlebooks-app",
     "version": "1.0.0",
-    "description": "",
+    "description": "books",
     "main": "server/server.js",
     "scripts": {
       "start": "node server/server.js",
@@ -10,8 +10,8 @@
       "build": "cd client && npm run build"
     },
     "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "author": "Alex Van Dyke",
+    "license": "MIT",
     "devDependencies": {
       "concurrently": "^5.1.0"
     }
