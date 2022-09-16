@@ -35,11 +35,24 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+Collaborators:
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+[Alex Van Dyke](https://github.com/AlexandertheGreat491)
 
-If you followed tutorials, include links to those here as well.
+Sources:
+
+[Create React App](https://github.com/facebook/create-react-app)
+
+[React Docs](https://reactjs.org/docs/getting-started.html)
+
+[react-router-dom](https://www.npmjs.com/package/react-router-dom)
+
+[react-dom](https://www.npmjs.com/package/react-dom)
+
+[react-scripts](https://www.npmjs.com/package/react-scripts)
+
+[react-icons](https://react-icons.github.io/react-icons/)
+
 
 ## License
 
