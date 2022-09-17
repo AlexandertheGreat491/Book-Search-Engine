@@ -1,5 +1,6 @@
 // imports react
 import React from "react";
+import './App.css';
 // imports BrowserRouter from react-router-dom
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // imports the SearchBooks page
