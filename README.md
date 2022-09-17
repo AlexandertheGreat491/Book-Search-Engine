@@ -45,6 +45,8 @@ Sources:
 
 [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
 
+[jwt-decode](https://www.npmjs.com/package/jwt-decode)
+
 [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 
 [React Docs](https://reactjs.org/docs/getting-started.html)
@@ -57,6 +59,7 @@ Sources:
 
 [react-icons](https://react-icons.github.io/react-icons/)
 
+[React Bootstrap](https://react-bootstrap.netlify.app/getting-started/introduction/)
 
 ## License
 
