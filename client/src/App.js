@@ -15,6 +15,12 @@ import {
   InMemoryCache,
   createHttpLink,
 } from "@apollo/client";
+//imports setContext
+import { setContext } from "@apollo/client/link/context";
+
+const httpLink = createHttpLink({
+  uri: "/graphql",
+});
 
 function App() {
   return (
