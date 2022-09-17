@@ -53,6 +53,18 @@ Mutation: {
         }
         throw new AuthenticationError('You need to be logged in');
     },
+    removeBook: async (parent, {bookId}, context) => {
+        if (context.user) {
+            const removeBook = await User.findByIdAndUpdate(
+             {_id: context.user._id},
+             {$pull: {savedBooks: {bookId}}}
+            );
+
+            return removeBook;
+        }
+
+        throw new AuthenticationError('You must be logged in');
+    }
 }
 };
 
