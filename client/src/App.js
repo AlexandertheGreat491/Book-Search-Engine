@@ -1,7 +1,7 @@
 // imports react
 import React from "react";
 // imports BrowserRouter from react-router-dom
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // imports the SearchBooks page
 import SearchBooks from "./pages/SearchBooks";
 // imports the SavedBooks page
@@ -22,11 +22,6 @@ const httpLink = createHttpLink({
   uri: "/graphql",
 });
 
-const client = new ApolloClient({
-  link: authLink.concat(httpLink),
-  cache: new InMemoryCache(),
-});
-
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem("id_token");
   return {
@@ -37,19 +32,26 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
+
+
+
 function App() {
   return (
     <ApolloProvider client={client}>
     <Router>
       <>
         <Navbar />
-        <Routes>
+        <Switch>
           <Route exact path="/" component={<SearchBooks />} />
           <Route path="/saved" component={<SavedBooks />} />
           <Route
             render={() => <h1 className="display-2">Wrong page!</h1>}
           />
-        </Routes>
+        </Switch>
       </>
     </Router>
     </ApolloProvider>
