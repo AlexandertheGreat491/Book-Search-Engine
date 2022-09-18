@@ -1,5 +1,6 @@
 // imports react
 import React from "react";
+// imports the App css
 import "./App.css";
 // imports BrowserRouter from react-router-dom
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -19,6 +20,7 @@ import {
 //imports setContext
 import { setContext } from "@apollo/client/link/context";
 
+// links to the Apollo server
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
@@ -55,4 +57,5 @@ function App() {
   );
 }
 
+// exports the root of the application
 export default App;

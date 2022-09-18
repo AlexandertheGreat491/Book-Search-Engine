@@ -1,10 +1,16 @@
+// imports react
 import React from 'react';
+// imports Jumbotron, Container, Col, Form, Button, Card, & CardColumns from react-bootstrap
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
+// imports useQuery and useMutation from apollo/client
 import { useQuery, useMutation } from '@apollo/client';
+// imports the GET_ME query
 import { GET_ME } from '../utils/queries';
+// imports the REMOVE_BOOK mutation
 import { REMOVE_BOOK } from '../utils/mutations';
-
+// imports the auth logic
 import Auth from '../utils/auth';
+// imports the functionality & logic from localStorage
 import { removeBookId } from '../utils/localStorage';
 
 const SavedBooks = () => {
@@ -12,7 +18,7 @@ const SavedBooks = () => {
   const [removeBook] = useMutation(REMOVE_BOOK);
   const userData = data?.me || {};
 
-  // create function that accepts the book's mongo _id value as param and deletes the book from the database
+  // function accepts the book's mongo _id value as param and deletes the book from the database
   const handleDeleteBook = async (bookId) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
@@ -22,14 +28,14 @@ const SavedBooks = () => {
 
     try {
       await removeBook({variables: { bookId }});
-      // upon success, remove book's id from localStorage
+      // when successful, the book's id is removed from localStorage
       removeBookId(bookId);
     } catch (err) {
       console.error(err);
     }
   };
 
-  // if data isn't here yet, say so
+ 
   if (loading) {
     return <h2>LOADING...</h2>;
   }
@@ -69,4 +75,5 @@ const SavedBooks = () => {
   );
 };
 
+// exports SavedBooks to the root of the application
 export default SavedBooks;
