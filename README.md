@@ -41,7 +41,17 @@ Collaborators:
 
 Sources:
 
+[bootstrap](https://www.npmjs.com/package/bootstrap)
+
 [Create React App](https://github.com/facebook/create-react-app)
+
+[Connect to Your Cluster](https://www.mongodb.com/docs/atlas/tutorial/connect-to-your-cluster/)
+
+[Deploy with Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas)
+
+[Introduction to GraphQL](https://graphql.org/learn/)
+
+[Introduction to ApolloServer](https://www.apollographql.com/docs/apollo-server/v2/)
 
 [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
 
