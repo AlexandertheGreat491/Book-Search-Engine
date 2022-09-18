@@ -12,16 +12,30 @@ Please use this table of contents to navigate the README.
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
 - What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
+My motivation for creating and building this project was to make an application that could utilize a React frontend framework and a Google Books API to create an interactive experience for users to search for books after I had refactored a RESTFUL API to be a GRAPHQL API.
 - What did you learn?
+I learned how to connect a Google Books API to a GRAPHQL API within a React frontend framework and a GraphQL backend framework. Additionally, I learned that I need to learn more about how to style this kind of application.
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Please utilize the following steps to install the app:
+
+Step 1: Use the `git clone` command to clone the [respository](https://github.com/AlexandertheGreat491/Book-Search-Engine.git).
+
+Step 2: Use the `npm run develop` command to verify that the app connects to the app locally.
+
+Step 3: Create a cluster and a database in MongoDB Atlas and make sure to add the name of your database to the connection.js logic.
+
+Step 4: Use the `heroku login` command to login to Heroku.
+
+Step 5: Use the `heroku create` command to create your Heroku app.
+
+Step 6: Use the `git push heroku main` command to deploy to Heroku.
+
+Step 7: Ensure that your GitHub account is connected to your Heroku account.
+
+Step 8: Open your Heroku app from the dashboard and click on the Deploy tab, search for the name of your repository and click connect, and then enable automatic deployments from your repository's main branch. At this point you should have a fully functional application.
 
 ## Usage
 
