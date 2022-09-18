@@ -3,14 +3,15 @@ const express = require('express');
 // imports the ApolloServer
 const {ApolloServer} = require('apollo-server-express');
 const path = require('path');
-
+// imports the typeDefs & resolvers
 const {typeDefs, resolvers} = require('./schemas');
+// imports the middleware from the auth logic
 const {authMiddleware} = require('./utils/auth');
 // imports the connetion.js & files in schemas directory
 const db = require('./config/connection');
 
 const PORT = process.env.PORT || 3001;
-// creates a new Apollo server and pass in schema data
+// an Apollo server that passes in schema data
 const server = new ApolloServer({
   typeDefs,
   resolvers,

@@ -6,6 +6,7 @@ const { User, Book } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
+    // resolver for the me query type
     Query: {
         me: async (parent, args, context) => {
             if (context.user) {
@@ -18,7 +19,7 @@ const resolvers = {
             throw new AuthenticationError('Not logged in');
         }
     },
-
+// resolvers for the mutations
     Mutation: {
         addUser: async (parent, args) => {
             const user = await User.create(args);
@@ -67,5 +68,5 @@ const resolvers = {
         }
     }
 };
-
+// exports the resolvers
 module.exports = resolvers;

@@ -47,5 +47,5 @@ type Mutation {
 
 `;
 
-// export the typeDefs
+// exports the typeDefs
 module.exports = typeDefs;
