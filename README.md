@@ -39,13 +39,9 @@ Step 8: Open your Heroku app from the dashboard and click on the Deploy tab, sea
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Please access the [Public GitHub Repository](https://github.com/AlexandertheGreat491/Book-Search-Engine.git) and the deployed application (link will go here) to begin familiarizing yourself with how that application can be utilized.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
 
 ## Credits
 
