@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 // connects to my database on MongoDB Atlas
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/book-search-engine', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://Insomnia123:Winston1234@cluster0.c9efx.mongodb.net/?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
