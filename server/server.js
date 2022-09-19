@@ -19,14 +19,11 @@ const server = new ApolloServer({
   context: authMiddleware,
 });
 
-// integrates the Apollo server with the Express application as middleware
-server.applyMiddleware({ app });
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // if the app is in production, client/build will be served as static assets
-if (process.env.MONGODB_URI === "production") {
+if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
 }
 
@@ -37,10 +34,10 @@ app.get("*", (req, res) => {
 // creates a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
+  // integrates the Apollo server with the Express application as middleware
+  server.applyMiddleware({ app });
 
-  
-
-  db.once('open', () => {
+  db.once("open", () => {
     app.listen(PORT, () => {
       console.log(`🌍 Now listening on localhost:${PORT}`);
       console.log(
