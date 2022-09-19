@@ -10,6 +10,10 @@
         "install": "cd server && npm i && cd ../client && npm i",
         "heroku-postbuild": "cd client && npm run build"
     },
+    "respository": {
+        "type": "git",
+        "url":"https://github.com/AlexandertheGreat491/Book-Search-Engine.git"
+    },
     "keywords": [],
     "author": "Alex Van Dyke",
     "license": "MIT",
