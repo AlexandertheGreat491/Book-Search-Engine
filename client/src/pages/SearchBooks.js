@@ -1,32 +1,29 @@
-// imports react with the useState and useEffect hooks
 import React, { useState, useEffect } from 'react';
-// imports Jumbotron, Container, Col, Form, Button, Card, & CardColumns from react-bootstrap
 import { Jumbotron, Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
-import { useMutation } from '@apollo/client';
-// imports the SAVE_BOOK mutation
-import { SAVE_BOOK } from '../utils/mutations';
-// imports the auth logic
+
 import Auth from '../utils/auth';
-// imports the functionality and logic from localStorage
 import { saveBookIds, getSavedBookIds } from '../utils/localStorage';
+import { useMutation } from '@apollo/react-hooks';
+import { SAVE_BOOK } from '../utils/mutations';
 
 const SearchBooks = () => {
-  // state for holding returned google api data
+  // create state for holding returned google api data
   const [searchedBooks, setSearchedBooks] = useState([]);
-  // state for holding our search field data
+  // create state for holding our search field data
   const [searchInput, setSearchInput] = useState('');
 
-  // state to hold saved bookId values
+  // create state to hold saved bookId values
   const [savedBookIds, setSavedBookIds] = useState(getSavedBookIds());
-  const [saveBook] = useMutation(SAVE_BOOK);
 
-  // sets up useEffect hook to save `savedBookIds` list to localStorage on component unmount
+  const [saveBook, { error }] = useMutation(SAVE_BOOK);
+
+  // set up useEffect hook to save `savedBookIds` list to localStorage on component unmount
+  // learn more here: https://reactjs.org/docs/hooks-effect.html#effects-with-cleanup
   useEffect(() => {
     return () => saveBookIds(savedBookIds);
   });
 
-  // a method to search for books and set state on form submit
-  // when a book is searched the book will be fetched from the Google Books API
+  // create method to search for books and set state on form submit
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
@@ -58,12 +55,12 @@ const SearchBooks = () => {
     }
   };
 
-  // handles saving a book to our database
+  // create function to handle saving a book to our database
   const handleSaveBook = async (bookId) => {
-    // finds the book in `searchedBooks` state by the matching id
+    // find the book in `searchedBooks` state by the matching id
     const bookToSave = searchedBooks.find((book) => book.bookId === bookId);
 
-    // gets token
+    // get token
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
     if (!token) {
@@ -71,9 +68,10 @@ const SearchBooks = () => {
     }
 
     try {
-      await saveBook({ variables: { bookData: { ...bookToSave } } });
-
-      // if a book successfully saves to user's account, save book id to state
+      const { data } = await saveBook({
+        variables: { bookData: { ...bookToSave } },
+      });
+      console.log(savedBookIds);
       setSavedBookIds([...savedBookIds, bookToSave.bookId]);
     } catch (err) {
       console.error(err);
@@ -144,5 +142,4 @@ const SearchBooks = () => {
   );
 };
 
-// exports SearchBooks to the root of the app
 export default SearchBooks;
