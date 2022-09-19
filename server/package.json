@@ -8,8 +8,8 @@
         "watch": "nodemon server.js"
     },
     "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "author": "Alex Van Dyke",
+    "license": "MIT",
     "dependencies": {
         "apollo-server-express": "^3.10.2",
         "bcrypt": "^5.0.0",
