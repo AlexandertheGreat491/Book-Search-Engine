@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // if the app is in production, client/build will be served as static assets
-if (process.env.NODE_ENV === "production") {
+if (process.env.MONGODB_URI === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
 }
 
