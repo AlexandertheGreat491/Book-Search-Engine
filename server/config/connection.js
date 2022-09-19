@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 // connects to my database on MongoDB Atlas
-let db = process.env.MONGODB_URI || "mongodb+srv://Insomnia123:Winston1235@cluster0.c9efx.mongodb.net/book-search?retryWrites=true&w=majority"
-mongoose.connect(MONGODB_URI), {
+let db = process.env.db || "mongodb+srv://Insomnia123:Winston1235@cluster0.c9efx.mongodb.net/book-search?retryWrites=true&w=majority"
+mongoose.connect(db), {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
