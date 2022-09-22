@@ -107,5 +107,5 @@ const LoginForm = () => {
     </>
   );
 };
-
+// exports the LoginForm function so that the LoginForm component can be used by the app
 export default LoginForm;

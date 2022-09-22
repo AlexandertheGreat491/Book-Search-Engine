@@ -114,6 +114,6 @@ const SignupForm = () => {
     </>
   );
 };
-// exports the SignupForm component
+// exports the SignupForm function so that the SignupForm component can be used by the app
 export default SignupForm;
 
