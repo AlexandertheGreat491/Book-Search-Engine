@@ -39,7 +39,10 @@ Step 8: Open your Heroku app from the dashboard and click on the Deploy tab, sea
 
 ## Usage
 
-Please access the [Public GitHub Repository](https://github.com/AlexandertheGreat491/Book-Search-Engine.git) and the deployed application (link will go here) to begin familiarizing yourself with how that application can be utilized.
+Please access the [Public GitHub Repository](https://github.com/AlexandertheGreat491/Book-Search-Engine.git) and the [deployed application](https://desolate-atoll-15843.herokuapp.com/) to begin familiarizing yourself with how that application can be utilized. Additionally, view screenshot below to get an idea of how the appliction can be utilized.
+
+![googel_books_screenshot](https://user-images.githubusercontent.com/64184203/191682664-43ae632d-d3e4-4e3e-abad-600add0de6cc.jpg)
+
 
 ## Credits
 
