@@ -19,7 +19,7 @@ I learned how to connect a Google Books API to a GRAPHQL API within a React fron
 
 ## Installation
 
-Please utilize the following steps to install the app:
+Please utilize the following steps to install the app locally and to create your own deployment of the app:
 
 Step 1: Use the `git clone` command to clone the [respository](https://github.com/AlexandertheGreat491/Book-Search-Engine.git).
 
@@ -35,14 +35,17 @@ Step 6: Use the `git push heroku main` command to deploy to Heroku.
 
 Step 7: Ensure that your GitHub account is connected to your Heroku account.
 
-Step 8: Open your Heroku app from the dashboard and click on the Deploy tab, search for the name of your repository and click connect, and then enable automatic deployments from your repository's main branch. At this point you should have a fully functional application.
+Step 8: Open your Heroku app from the dashboard and click on the Deploy tab, search for the name of your repository and click connect, and then enable automatic deployments from your repository's main branch.
+
+Step 9: From app dashboard on Heroku click on the Settings tab and then click on Reveal Config Vars.
+
+Step 10: In the Key field entire `MONGODB_URI` and in the Value field enter the connection string for your cluster which will follow this format `mongodb+srv://<username>:<password>@cluster0.c9efx.mongodb.net/<dbname>?retryWrites=true&w=majority`, then click add. At this point you should have a fully deployed and functional application.
 
 ## Usage
 
 Please access the [Public GitHub Repository](https://github.com/AlexandertheGreat491/Book-Search-Engine.git) and the [deployed application](https://desolate-atoll-15843.herokuapp.com/) to begin familiarizing yourself with how that application can be utilized. Additionally, view screenshot below to get an idea of how the appliction can be utilized.
 
 ![googel_books_screenshot](https://user-images.githubusercontent.com/64184203/191682664-43ae632d-d3e4-4e3e-abad-600add0de6cc.jpg)
-
 
 ## Credits
 
