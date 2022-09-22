@@ -23,7 +23,7 @@ Please utilize the following steps to install the app:
 
 Step 1: Use the `git clone` command to clone the [respository](https://github.com/AlexandertheGreat491/Book-Search-Engine.git).
 
-Step 2: Use the `npm run develop` command to verify that the app connects to the app locally.
+Step 2: Use the `npm run develop` command to verify that the app works locally.
 
 Step 3: Create a cluster and a database in MongoDB Atlas and make sure to add the name of your database to the connection.js logic.
 
@@ -41,8 +41,6 @@ Step 8: Open your Heroku app from the dashboard and click on the Deploy tab, sea
 
 Please access the [Public GitHub Repository](https://github.com/AlexandertheGreat491/Book-Search-Engine.git) and the deployed application (link will go here) to begin familiarizing yourself with how that application can be utilized.
 
-
-
 ## Credits
 
 Collaborators:
@@ -50,6 +48,8 @@ Collaborators:
 [Alex Van Dyke](https://github.com/AlexandertheGreat491)
 
 Sources:
+
+[Alerts](https://react-bootstrap.github.io/components/alerts/)
 
 [bootstrap](https://www.npmjs.com/package/bootstrap)
 

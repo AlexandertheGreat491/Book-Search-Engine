@@ -1,8 +1,12 @@
-// see SignupForm.js for comments
+// imports React and its useState and useEffect hooks
 import React, { useState, useEffect } from "react";
+// imports the Form, Button, and Alert components from react-bootstrap
 import { Form, Button, Alert } from "react-bootstrap";
+// imports useMutation from @apollo/client
 import { useMutation } from "@apollo/client";
+// imports the the LOGIN_USER mutation
 import { LOGIN_USER } from "../utils/mutations";
+// imports the auth logic
 import Auth from "../utils/auth";
 
 const LoginForm = () => {
@@ -27,7 +31,7 @@ const LoginForm = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    // checks if the form has everything (as per react-bootstrap docs)
+    // checks if the form has everything need for react-bootstrap
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
@@ -45,7 +49,7 @@ const LoginForm = () => {
       console.error(e);
     }
 
-    // clear form values
+    // clears the form values
     setUserFormData({
       email: '',
       password: '',

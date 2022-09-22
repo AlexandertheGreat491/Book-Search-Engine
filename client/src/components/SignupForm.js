@@ -1,9 +1,13 @@
+// imports React along with the useState & useEffect hooks
 import React, { useState, useEffect } from 'react';
+// imports the Form, Button, & Alert components from react-bootstrap
 import { Form, Button, Alert } from 'react-bootstrap';
+// imports useMutation
 import {useMutation} from '@apollo/client';
+// imports the ADD_USER mutation
 import { ADD_USER } from '../utils/mutations';
 
-
+// imports the auth logic
 import Auth from '../utils/auth';
 
 const SignupForm = () => {
@@ -110,6 +114,6 @@ const SignupForm = () => {
     </>
   );
 };
-
+// exports the SignupForm component
 export default SignupForm;
 

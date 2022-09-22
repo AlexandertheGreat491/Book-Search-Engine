@@ -22,7 +22,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    // savedBooks is set to be an array of data that adheres to the bookSchema
+    // savedBooks is set to be an array of data that follows the bookSchema
     savedBooks: [bookSchema],
   },
   // set using this virtual below
@@ -33,7 +33,7 @@ const userSchema = new Schema(
   }
 );
 
-// the user password is hashed
+// the user password is hashed to protect user passwords
 userSchema.pre('save', async function (next) {
   if (this.isNew || this.isModified('password')) {
     const saltRounds = 10;

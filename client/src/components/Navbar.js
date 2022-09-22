@@ -6,11 +6,11 @@ import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
 // imports the SignupForm & LoginForm components
 import SignUpForm from './SignupForm';
 import LoginForm from './LoginForm';
-
+// imports the auth logic
 import Auth from '../utils/auth';
 
 const AppNavbar = () => {
-  // sets modal display state
+  // sets the modal display state
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -76,5 +76,5 @@ const AppNavbar = () => {
     </>
   );
 };
-
+// exports the AppNavbar function so that the Navbar component can be used by the app
 export default AppNavbar;

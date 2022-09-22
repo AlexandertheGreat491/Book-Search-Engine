@@ -1,3 +1,4 @@
+// exports the getSavedBookIds function
 export const getSavedBookIds = () => {
   const savedBookIds = localStorage.getItem("saved_books")
     ? JSON.parse(localStorage.getItem("saved_books"))
@@ -6,6 +7,7 @@ export const getSavedBookIds = () => {
   return savedBookIds;
 };
 
+// exports the saveBookIds function
 export const saveBookIds = (bookIdArr) => {
   if (bookIdArr.length) {
     localStorage.setItem("saved_books", JSON.stringify(bookIdArr));
@@ -14,6 +16,7 @@ export const saveBookIds = (bookIdArr) => {
   }
 };
 
+// exports the removeBookId function with bookId as an argument
 export const removeBookId = (bookId) => {
   const savedBookIds = localStorage.getItem("saved_books")
     ? JSON.parse(localStorage.getItem("saved_books"))
